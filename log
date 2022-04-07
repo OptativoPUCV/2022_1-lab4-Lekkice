@@ -29,3 +29,9 @@ Thu Apr  7 00:26:03 UTC 2022:
  tests:  16|1
 total_score: 60/70
 35d4db7
+Thu Apr  7 00:32:44 UTC 2022: 
+ hashmap.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+ tests:  16|1
+total_score: 60/70
+a4bd16a
