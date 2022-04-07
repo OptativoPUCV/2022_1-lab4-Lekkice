@@ -120,7 +120,7 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    if (map->capacity < 2) return NULL;
+    if (map->size == 0) return NULL;
     int i = (map->current + 1) % map->capacity;
     while (1)
     {
