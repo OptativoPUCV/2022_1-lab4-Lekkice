@@ -107,7 +107,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-    if (map->capacity == 0) return NULL;
+    if (map->size == 0) return NULL;
     for (int i = 0; i < map->capacity; i++)
     {
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL)
@@ -129,7 +129,8 @@ Pair * nextMap(HashMap * map) {
             map->current = i;
             break;
         }
-        i = (i+1) % map->capacity;
+        i = (i+1);// % map->capacity;
+        if (i == (map->capacity + 1)) return NULL;
     }
     return map->buckets[map->current];
 }
