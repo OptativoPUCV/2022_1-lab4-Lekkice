@@ -69,8 +69,8 @@ void enlarge(HashMap * map) {
             insertMap(map, bucket->key, bucket->value);
         }
     }
-    free(oldMap->buckets);
-    free(oldMap);
+    //free(oldMap->buckets);
+    //free(oldMap);
     return;
 }
 
@@ -129,7 +129,7 @@ Pair * nextMap(HashMap * map) {
             map->current = i;
             break;
         }
-        i = (i+1);// % map->capacity;
+        i++;
         if (i == (map->capacity + 1)) return NULL;
     }
     return map->buckets[map->current];
